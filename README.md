@@ -1,41 +1,45 @@
-# Audiobook_Downloader
- A python script to download mp3s from zaudiobooks for Windows and Android
+# Audiobook Downloader
+ A python script to download mp3s from zaudiobooks for Windows and Android.
 
- How to use:
-    1. Make sure python is installed
-        Windows - https://www.python.org/
-        Android - Download Termux and run:
-            pkg install python
+## How to use
+### 0. Windows or Android
+ You can run this program on either OS, but if you are not tech savvy I recommend doing everything on Windows then transferring your files over to your phone.
+ 
+### 1. Make sure python is installed
+ #### Windows:
+  Download and install [Python](https://www.python.org/).
+ #### Android:
+  Download [Termux](https://play.google.com/store/apps/details?id=com.termux) from the Playstore and run `pkg install python`
 
-    2. Install the python requests library
-        Windows - in cmd/powershell:
-            python -m pip install requests
-        Android - in Termux:
-            python -m pip install requests
-    
-    3. Download the Audiobook-Downloader script.
+### 2. Install the python requests library
+ #### Windows:
+ In cmd/powershell run `python -m pip install requests`
+ #### Android:
+ In Termux run `python -m pip install requests`
 
-    4. Move the script to a seperate folder.
+### 4. Download the Audiobook Downloader script
 
-    5. Go to https://zaudiobooks.com/ and find an audiobook you want to download.
+### 5. Move the script to a seperate folder
 
-    6. Copy the address to the audiobook, for example:
-        https://zaudiobooks.com/the-way-of-kings_t1/
-    
-    7. Change your working directory to the one where you placed the python script
-        Windows - you can right click the folder and click "copy as PATH" and then in cmd/powershell:
-            cd "path/to/your/folder"
-        Android - Make sure Termux has access file permissions, then in Termux:
-            cd ~/storage/shared
-        You can then run the following command to view the folders you can go to.
-            ls
-        Navigate to the folder you put the python script in:
-            cd "path/to/your/folder"
+### 6. Go to [zaudiobooks](https://zaudiobooks.com/) and find an audiobook you want to download
 
-    8. Run the script in command line and give the link to your chosen audiobook (using The Way of Kings as an example)
-        Windows - in cmd/powershell:
-            python audiobook-downloader.py https://zaudiobooks.com/the-way-of-kings_t1/
-        Android - in Termux:
-            python audiobook-downloader.py https://zaudiobooks.com/the-way-of-kings_t1/
-    
-    9. The script will download all the mp3 files. You can listen to the audiobook using Smart Audiobook Player on Android to mimic an Audible-like experience. On Windows there isn't any good audiobook players but you could use VLC or transfer the files to your phone to listen on there.
+### 7. Copy the address to the audiobook, for example:
+ `https://zaudiobooks.com/the-way-of-kings_t1/`
+
+### 8. Change your working directory to the one where you placed the python script
+ #### Windows:
+ You can right click the folder that contains Audiobook_Downloader.py and click "show more options" > "copy as PATH" and then in cmd/powershell run `cd "path/to/your/folder"`
+ #### Android:
+ Make sure Termux has access file permissions, then in Termux run `cd ~/storage/shared`
+ You can then run the following command to view the folders you can go to `ls`
+ Navigate to the folder you put the python script in `cd "path/to/your/folder"`
+
+### 9. Run the script in command line and give the link to your chosen audiobook
+I am using The Way of Kings as an example, replace the way of link with your own.
+ #### Windows:
+ In cmd/powershell run `python audiobook-downloader.py https://zaudiobooks.com/the-way-of-kings_t1/`
+ #### Android
+ In Termux run `python audiobook-downloader.py https://zaudiobooks.com/the-way-of-kings_t1/`
+
+### 10. Done
+The script will download all the mp3 files. You can listen to the audiobook using [Smart Audiobook Player](https://play.google.com/store/apps/details?id=ak.alizandro.smartaudiobookplayer) on Android to have an Audible-like experience. On Windows there isn't any good audiobook players but you could use VLC media player or transfer the files to your phone to listen on there.
