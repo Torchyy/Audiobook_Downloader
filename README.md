@@ -17,7 +17,7 @@
  #### Android:
  In Termux run `python -m pip install requests`
 
-### 4. Download the Audiobook Downloader script
+### 4. Download the [Audiobook Downloader](https://github.com/Torchyy/Audiobook_Downloader/releases/download/v1.0.0/audiobook-downloader.py) script
 
 ### 5. Move the script to a seperate folder
 
