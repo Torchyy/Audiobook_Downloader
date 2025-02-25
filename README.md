@@ -30,8 +30,8 @@
  #### Windows:
  You can right click the folder that contains Audiobook_Downloader.py and click "show more options" > "copy as PATH" and then in cmd/powershell run `cd "path/to/your/folder"`
  #### Android:
- Make sure Termux has access file permissions, then in Termux run `cd ~/storage/shared`
- You can then run the following command to view the folders you can go to `ls`
+ Make sure Termux has access file permissions, then in Termux run `cd ~/storage/shared`\
+ You can view the folders you can go to by running `ls`\
  Navigate to the folder you put the python script in `cd "path/to/your/folder"`
 
 ### 9. Run the script in command line and give the link to your chosen audiobook
