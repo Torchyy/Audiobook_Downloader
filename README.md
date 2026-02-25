@@ -1,5 +1,5 @@
 # Audiobook Downloader
-- A python script to download mp3s from zaudiobooks for Windows and Android.
+- A python script to download mp3s from [naudios](https://naudios.com) for Windows and Android.
 
 ## Windows or Android
 - You can run this program on either OS, but if you are not tech savvy I recommend doing everything on Windows then transferring your files over to your phone.
@@ -23,10 +23,10 @@
 ### 5. Move the script to a seperate folder
 
 ### 6. Find the ZAudiobook you want to download
-- [zaudiobooks](https://zaudiobooks.com/)
+- [naudios](https://naudios.com)
 
 ### 7. Copy the address to the audiobook, for example:
-- `https://zaudiobooks.com/the-way-of-kings_t1/`
+- `https://naudios.com/watch/202602258571`
 
 ### 8. Change your working directory to the one where you placed the python script
 #### Windows:
@@ -39,9 +39,9 @@
 ### 9. Run the script
 - I am using The Way of Kings as an example, replace it link with your own.
 #### Windows:
-- In cmd/powershell run `python audiobook-downloader.py https://zaudiobooks.com/the-way-of-kings_t1/`
+- In cmd/powershell run `python audiobook-downloader.py https://naudios.com/watch/202602258571`
 #### Android
-- In Termux run `python audiobook-downloader.py https://zaudiobooks.com/the-way-of-kings_t1/`
+- In Termux run `python audiobook-downloader.py https://naudios.com/watch/202602258571`
 
 ### 10. Done
-- The script will download all the mp3 files. You can listen to the audiobook using [Smart Audiobook Player](https://play.google.com/store/apps/details?id=ak.alizandro.smartaudiobookplayer) on Android to have an Audible-like experience. On Windows there isn't any good audiobook players but you could use VLC media player or transfer the files to your phone to listen on there.
+- The script will download all the mp3 files. You can listen to the audiobook using [Smart Audiobook Player](https://play.google.com/store/apps/details?id=ak.alizandro.smartaudiobookplayer) on Android to have an Audible-like experience. On Windows you could use [Audibly](https://github.com/rstewa/Audibly), VLC media player, or transfer the files to your phone to listen on there.
