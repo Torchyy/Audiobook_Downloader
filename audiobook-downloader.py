@@ -1,7 +1,7 @@
 import requests
 import sys
 
-site = "https://zaudiobooks.com/"
+site = "https://naudios.com/"
 
 # Process the command line
 if len(sys.argv) != 2:
@@ -18,36 +18,39 @@ r = requests.get(website).text
 with open("website.txt", "w", encoding="utf-8") as f:
     f.write(r)
 
+f = open("website.txt", "r", encoding="utf-8")
 
-
-url = "https://files01.freeaudiobooks.top/audio/"
-
-# Open file and read it
-f = open("website.txt", "r")
-
-# Skip Lines until we get to "tracks = ["
+# Skip lines until we get to links to mp3
 for line in f:
-    if "tracks = [" in line:
+    if "track-item active" in line:
         break
 f.readline()
-f.readline()
-f.readline()
-f.readline()
 
+print("-----Audiobook Download Starting-----")
 for line in f:
-    if "name" in line:
-        name = line.strip().replace('"', '').replace('\\', "").replace('name: ', "")[:-1] + ".mp3"
-        print(f'Downloading {name}')
+    # Link to audio file
+    src = line.strip().replace("data-src=", '').replace('"', '').replace('>', '').replace("amp;", '')
+    f.readline()
 
-    if "chapter_link_dropbox" in line:
-        url2 = line.strip().replace('"', '').replace('\\', "").replace("chapter_link_dropbox: ", "")[:-1]
-        r = requests.get(url + url2)
-        with open(name, 'wb') as outfile:
-            outfile.write(r.content)
-        print(f"Finished Downloading {name}")
-    
-    if "]," in line:
+    # Name of file
+    name = f.readline().strip().replace("</div>", '').replace("â€“", '-').replace(' ', '') + ".mp3"
+
+    if "Footer" in name:
         print("-----Audiobook Download Complete-----")
         break
+
+    # Download file
+    print(f"Downloading {name}")
+    audio = requests.get(src)
+    with open(name, 'wb') as outfile:
+        outfile.write(audio.content)
+    print(" Download Finished")
+
+    # Skip empty and /div lines
+    f.readline()
+    f.readline()
+    f.readline()
+
+    
 
 f.close()
