@@ -18,7 +18,7 @@
 - In Termux run `python -m pip install requests`
 
 ### 4. Download the script
-- [Audiobook Downloader](https://github.com/Torchyy/Audiobook_Downloader/releases/download/v1.0.0/audiobook-downloader.py)
+- [Audiobook Downloader](https://github.com/Torchyy/Audiobook_Downloader/releases)
 
 ### 5. Move the script to a seperate folder
 
